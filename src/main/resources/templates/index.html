@@ -33,7 +33,24 @@
         <div class="card">
             <div class="card-header">Products managment</div>
             <div class="card-body">
-
+            <table class="table">
+                <thead>
+                <th>Reference</th>
+                <th>Libelle</th>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                </thead>
+                <tbody>
+                <tr th:each="produit:${productList}">
+                        <td th:text="${produit.referenceProduct}"></td>
+                    <td th:text="${produit.libelleProduct}"></td>
+                    <td th:text="${produit.descriptionProduct}"></td>
+                    <td th:text="${produit.quantiteProduct}"></td>
+                    <td th:text="${produit.priceProduct}"></td>
+                </tr>
+                </tbody>
+            </table>
             </div>
         </div>
     </div>
