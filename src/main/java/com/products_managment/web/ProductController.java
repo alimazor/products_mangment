@@ -24,6 +24,8 @@ public class ProductController {
 
         Page<Product> productList = productsDao.findAll(PageRequest.of(p,s));
         model.addAttribute("productList",productList.getContent());
+        int[] pages = new int[productList.getTotalPages()];
+        model.addAttribute("pages",pages);
         return "index";
     }
 
