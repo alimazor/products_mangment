@@ -26,6 +26,8 @@ public class ProductController {
         model.addAttribute("productList",productList.getContent());
         int[] pages = new int[productList.getTotalPages()];
         model.addAttribute("pages",pages);
+        model.addAttribute("size",s);
+        model.addAttribute("pageCourant",p);
         return "index";
     }
 
